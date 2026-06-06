@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-define(ROOT_PATH, dirname(__DIR__, 1));
 ?>
 
 <!DOCTYPE html>
@@ -9,16 +7,16 @@ define(ROOT_PATH, dirname(__DIR__, 1));
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="<?php echo ROOT_PATH ?>/styles/style.css">
-        <link rel="stylesheet" href="<?php echo ROOT_PATH ?>/styles/form.css">
-        <link rel="icon" type="image/x-icon" href="<?php echo ROOT_PATH ?>/images/logo-favicon.ico">
+        <link rel="stylesheet" href="../public/styles/style.css">
+        <link rel="stylesheet" href="../public/styles/form.css">
+        <link rel="icon" type="image/x-icon" href="../public/images/logo-favicon.ico">
         <title>Login DOA FÁCIL</title>
     </head>
     <body>
 
     <header class="header">
         <div class="a">
-            <img id="header-logo" alt='Logotipo do "Doá Facil"' src="<?php echo ROOT_PATH ?>/images/img00.png">
+            <img id="header-logo" alt='Logotipo do "Doá Facil"' src="../public/images/img00.png">
         
             <div class="textos-header">
                 <h1><span style="color: rgb(0, 165, 0);">DOA</span><span style="color: rgb(0, 81, 255);">Fácil</span></h1>
@@ -76,13 +74,13 @@ define(ROOT_PATH, dirname(__DIR__, 1));
                         // --- NOVA LÓGICA DE REDIRECIONAMENTO ---
                         if ($tipo_user === "Donatário") {
                             // Redireciona Donatário
-                            header("Location: " . ROOT_PATH . "/sites/receber.php"); 
+                            header("Location: ../public/sites/receber.php"); 
                         } elseif ($tipo_user === "Doador") {
                             // Redireciona Doador
-                            header("Location: " . ROOT_PATH . "/sites/doacao.php"); 
+                            header("Location: ../public/sites/doacao.php"); 
                         } else {
                             // Prevenção caso caia em alguma outra opção no futuro
-                            header("Location: " . ROOT_PATH . "/sites/perfil.php"); 
+                            header("Location: ../public/sites/perfil.php"); 
                         }
                         exit();
                     }
