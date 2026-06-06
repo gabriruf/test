@@ -1,0 +1,115 @@
+<?php
+session_start();
+
+if ($_SESSION["tipo_user"] !== "Doador") {
+    header("Location: ./receber.php");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pedidos Disponíveis</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../styles/doacao.css">
+        <link rel="icon" type="image/x-icon" href="../images/logo-favicon.ico">
+    </head>
+    <body>
+
+        <header class="topbar">
+            <div class="topbar-container">
+                <h1 class="logo">Pedidos disponíveis</h1>
+                <div class="search-filter-container">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Buscar pedidos...">
+                    </div>
+                    <button class="filter-btn">
+                        <i class="fa-solid fa-sliders"></i>
+                    </button>
+                </div>
+                <div class="notification-icon">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <h2 id="welcome-text">Bem-vindo, <?php echo $_SESSION["username"];?></h2>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <section class="grid-pedidos">
+            
+                <article class="card">
+                    <div class="card-image">
+                        <img src="../images/cestaBasica.jpg" alt="Cesta básica">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Cesta básica</h2>
+                        <p class="card-description">Família com 3 crianças precisa de alimentos básicos.</p>
+                    
+                        <div class="card-footer">
+                            <span class="priority alta">
+                                <span class="dot"></span> Alta
+                            </span>
+                            <button class="btn-doar">
+                                <i class="fa-solid fa-heart"></i> DOAR
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="../images/ropaFrio.jpg" alt="Roupas de inverno">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Roupas de inverno</h2>
+                        <p class="card-description">Precisamos de roupas de frio para adultos e crianças.</p>
+                    
+                        <div class="card-footer">
+                            <span class="priority media">
+                                <span class="dot"></span> Média
+                            </span>
+                            <button class="btn-doar">
+                                <i class="fa-solid fa-heart"></i> DOAR
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="../images/itensHigiene.jpg" alt="Itens de higiene">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Itens de higiene</h2>
+                        <p class="card-description">Precisamos de sabonete, shampoo, pasta de dente e outros.</p>
+                    
+                        <div class="card-footer">
+                            <span class="priority baixa">
+                                <span class="dot"></span> Baixa
+                            </span>
+                            <button class="btn-doar">
+                                <i class="fa-solid fa-heart"></i> DOAR
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        <nav class="sidebar">
+            <ul>
+                <li class="active"><a href="#"><span>Início</span></a></li>
+                <li><a href="#"><span>Favoritos</span></a></li>
+                <li><a href="./perfil.php"><span>Perfil</span></a></li>
+                <li><a href="./ondedoar.html" target="_blank">Saiba onde doar</a></li>
+                <li><a href="./conheFinanceiro.html">Conhecimento Financeiro</a></li>
+                <li><a href="./sobreNos.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+
+    </body>
+</html>

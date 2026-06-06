@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #b7e7ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/*Adiconado para ondedoar*/
+p,a {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+nav {
+    font-size: 16px;
+    word-spacing: 5px;
+}
+
+main {
+    flex-grow: 0.7;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    margin: 10px;
+}
+
+.ongDestaque { 
+    width: 100%;
+    height: 25vh;
+    flex-grow: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CentroDoacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px; 
+    padding: 20px;
+}
+
+.card-ong {
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea; 
+    border-radius: 16px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    flex-direction: column;
+    gap: 80px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    text-align: center;
+
+    max-width: 1200px;
+}
+
+.card-ong:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12); 
+    border-color: #b7e7ff; 
+}
+
+.logoong { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; 
+    height: 200px;
+    background-color: #f9f9f9; 
+    border-radius: 50%; 
+    margin-bottom: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.endereco:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+
+/*Mapa*/
+
+.mapinha {
+    background-color: rgb(244, 245, 244);
+    width: 1200px;
+    height: 600px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linhaondedoar{
+    border: 0; 
+    height: 2px; 
+    background: linear-gradient(90deg, transparent, #333, #999, #333, transparent);
+    width: 80%;
+    opacity: 50%;
+}
+
