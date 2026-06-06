@@ -118,7 +118,7 @@ session_start();
                     <button type="submit" value="login" name="login" class="btn">ENTRAR</button>
                 </div>
 
-                <p class="nao-conta">Ainda não possui uma conta?&nbsp;<a href="cadastro.php">Cadastre-se</a></p>
+                <p class="nao-conta">Ainda não possui uma conta?&nbsp;<a href="./cadastro.php">Cadastre-se</a></p>
             </form>
         </main>
 
